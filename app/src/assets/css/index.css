@@ -1,0 +1,28 @@
+body {
+    padding: 50px;
+    background-color: #F1F6F4;
+}
+
+.header_image {
+    background-image: url('/assets/images/blinkist_sprite.png');
+    display: block;
+    min-width: 6.5rem;
+    width: 230px;
+    height: 45px;
+    background-position: 0 -609px;
+    background-repeat: no-repeat;
+}
+
+#login_form {
+    width: 19%;
+    height: 100%;
+    margin-top: 150px;
+    color: #03314B;
+    font-family: sans-serif, arial;
+}
+
+#login_form form {
+    margin-top: 10px;
+}
+
+

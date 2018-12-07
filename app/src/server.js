@@ -1,16 +1,10 @@
-import Express from'express';
-
-const http = require('http');
-
-const hostname = '127.0.0.1';
+const express = require('express');
+const app = express();
+const path = require('path');
 const port = 3000;
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello World\n');
-});
+app.use('/assets', express.static(path.join(__dirname, 'assets')));
 
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
-});
+app.get('/', (req, res) => res.sendFile(path.join(__dirname, '/view/index.html')));
+
+app.listen(port, () => console.log(`app listening on port ${port}!`));
