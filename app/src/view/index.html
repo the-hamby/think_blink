@@ -8,12 +8,17 @@
     <body>
        <div class='header_image'></div>
        <div id="login">
-            <h1 class='title'>Discover life-changing ideas</h1>
+            {% if chosenVariant == 'A' %}
+                <h1 class='title'>Discover life-changing ideas</h1>
+            {% else %}
+                <h1 class='title'>Fit reading into your life</h1>
+            {% endif %}
             <span>With short explainers, you can understand the key ideas from a book in just 15 minutes</span>
-            <form submit="/login">
-                <input type="text" placeholder="Enter email address"/>
-                <input type="password" placeholder="Create password"/>
-                <input type="submit" value="Start free trial"/>
+            <form class="login_form" action="/login" method="GET">
+                <input name="email" type="text" placeholder="Enter email address"/>
+                <input name="password" type="password" placeholder="Create password"/>
+                <input class="submit_button" type="submit" value="Start free trial"/>
+                <input name="variant" type="hidden" value="{{ chosenVariant }}"/>
             </form>
         </div>
 

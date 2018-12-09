@@ -13,7 +13,7 @@ body {
     background-repeat: no-repeat;
 }
 
-#login_form {
+#login {
     width: 19%;
     height: 100%;
     margin-top: 150px;
@@ -21,8 +21,24 @@ body {
     font-family: sans-serif, arial;
 }
 
-#login_form form {
+.login_form {
     margin-top: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
+.login_form input {
+    margin-bottom: 10px;
+    height: 30px;
+    width: 200px;
+    background-color: transparent;
+    border: 1px solid #BAC8CE;
+    border-radius: 3px;
+}
+
+.login_form input.submit_button {
+    background-color: #2CE080;
+    border: 1px solid #2CE080;
+    color: #fff;
+}
 

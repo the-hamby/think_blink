@@ -13,6 +13,8 @@
   "author": "Keith Thorne",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4"
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.4",
+    "nunjucks": "^3.1.4"
   }
 }
